@@ -2,9 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from qutip import *
 
-# ======================================
 # Parameters from paper
-# ======================================
 
 omega = 1.0
 Delta_c = -0.8*omega
@@ -31,9 +29,7 @@ x0_values = np.pi*np.array([
 
 eta_values = np.linspace(0,2,80)
 
-# ======================================
 # Operators
-# ======================================
 
 a = tensor(destroy(Nc), qeye(Nm))
 adag = a.dag()
@@ -47,9 +43,7 @@ H0 = (
     + omega*(bdag*b + 0.5)
 )
 
-# ======================================
 # Figure 1(a,b)
-# ======================================
 
 plt.figure(figsize=(7,5))
 
